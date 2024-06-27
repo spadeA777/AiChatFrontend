@@ -1,0 +1,134 @@
+/* Tailwind CSS */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* Fonts */
+@import url('https://fonts.cdnfonts.com/css/satoshi');
+
+/* Variables */
+:root {
+	--midnight-moss2: rgba(5, 5, 5, 0.349);
+	--midnight-moss: rgba(5, 5, 5, 1);
+	--charade: rgba(43, 45, 58, 1);
+	--daisy-bush-2: rgba(82, 22, 149, 0.4);
+	--daisy-bush: rgba(82, 22, 149, 1);
+	--hoki: rgba(98, 128, 165, 1);
+	--dove-gray: rgba(112, 112, 112, 1);
+	--gull-gray-2: rgba(157, 171, 191, 0.239);
+	--gull-gray: rgba(157, 171, 191, 1);
+	--purple-mountains-majesty: rgba(161, 133, 191, 1);
+	--cadet-blue: rgba(165, 178, 196, 1);
+	--pigeon-post: rgba(171, 201, 217, 0.431);
+	--east-side: rgba(175, 151, 202, 1);
+	--mischka: rgba(203, 210, 221, 0.902);
+	--botticelli: rgba(204, 223, 232, 1);
+	--mischka-2: rgba(208, 214, 224, 0.902);
+	--blossom: rgba(213, 180, 201, 0.729);
+	--geyser: rgba(213, 218, 227, 1);
+	--lola: rgba(224, 200, 215, 1);
+	--prim: rgba(232, 226, 240, 1);
+	--athens-gray: rgba(233, 237, 242, 1);
+	--concrete: rgba(243, 243, 243, 1);
+	--white: rgba(255, 255, 255, 1);
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html {
+	line-height: 1.15;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+
+body {
+	font-family: 'Satoshi', sans-serif;
+	overflow: hidden;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+.thin-scroll {
+	&::-webkit-scrollbar {
+		width: 6px;
+		border-radius: 6px;
+	}
+	&::-webkit-scrollbar-track {
+		border-radius: 6px;
+		background-color: transparent;
+	}
+	&::-webkit-scrollbar-thumb {
+		border-radius: 6px;
+		box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.2);
+	}
+}
+
+.happy-index .active svg {
+    scale: 1.5;
+}
+
+.native-widget-page {
+	
+	width: 100% !important;
+	max-width: 100% !important;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	margin: auto;
+	background: transparent !important;
+	box-shadow: none !important;
+
+	.native-title {
+		display: none;
+	}
+	.native-swap-input {
+		background: #2d303580 !important;
+	}
+	.native-side-switcher.native-btn {
+		background: #5974ff !important;
+	}
+	a {
+		display: none !important;
+	}
+}
+
+.native-modal-overlay {
+	z-index: 10000 !important;
+}
+
+/* HTML: <div class="loader"></div> */
+.loader {
+	width: 50px;
+	aspect-ratio: 1;
+	display: grid;
+}
+.loader::before,
+.loader::after {    
+content:"";
+	grid-area: 1/1;
+	--c:no-repeat radial-gradient(farthest-side,#25b09b 92%,#0000);
+	background: 
+		var(--c) 50%  0, 
+		var(--c) 50%  100%, 
+		var(--c) 100% 50%, 
+		var(--c) 0    50%;
+	background-size: 12px 12px;
+	animation: l12 1s infinite;
+}
+.loader::before {
+	margin: 4px;
+	filter: hue-rotate(45deg);
+	background-size: 8px 8px;
+	animation-timing-function: linear
+}
+
+@keyframes l12 { 
+	100%{transform: rotate(.5turn)}
+}

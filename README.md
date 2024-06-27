@@ -1,2 +1,1 @@
-# AiChatFrontend
-AI chat front-end project.
+# project_bae_app

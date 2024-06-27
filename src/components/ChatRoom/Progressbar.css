@@ -1,0 +1,9 @@
+.progressbarContainer {
+    background-color: transparent;
+    border-radius: 20px;
+}
+
+.progressbarCompleted {
+    background-color: #666633;
+    border-radius: 20px;
+}
